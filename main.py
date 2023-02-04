@@ -18,7 +18,7 @@ elif selectMenu == 2:
     student = input("Input a student name which is you want update it: ")
     isExisting = students.count(student.lower())
     if isExisting == 1: # If inputted data is available on datastore
-        idx = student.index(student) # Get index number in datastore 
+        idx = students.index(student) # Get index number in datastore 
         newStudentName = input("Input a new student name for update it: ")
         students[idx] = newStudentName.lower()
         print("List a new students data after updated: {0}".format(students))
