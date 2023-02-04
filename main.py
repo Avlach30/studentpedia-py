@@ -17,3 +17,15 @@ if selectMenu == 1:
         students.append(newStudent.lower())
         print("List a new students: {0}".format(students))
         exit()
+elif selectMenu == 2:
+    student = input("Input a student name which is you want update it: ")
+    isExisting = students.count(student.lower())
+    if isExisting == 1: # If inputted data is available on datastore
+        idx = student.index(student) # Get index number in datastore 
+        newStudentName = input("Input a new student name for update it: ")
+        students[idx] = newStudentName.lower()
+        print("List a new students data after updated: {0}".format(students))
+        exit()
+    else:
+        print("Sorry, {0} is not found from datastore".format(student))
+        exit()
